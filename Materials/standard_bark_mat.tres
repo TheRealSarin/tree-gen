@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dsxwypoftqofh"]
+
+[ext_resource type="Texture2D" uid="uid://dd3ubpu0qstk1" path="res://Textures/bark_albedo256x.png" id="1_8qqau"]
+[ext_resource type="Texture2D" uid="uid://cxya8vmihaj66" path="res://Textures/bark_normal256x.png" id="2_sfbdx"]
+
+[resource]
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.5236384, 0.27580944, 0.13459435, 1)
+albedo_texture = ExtResource("1_8qqau")
+heightmap_texture = ExtResource("2_sfbdx")
+detail_enabled = true
+detail_blend_mode = 3
+detail_albedo = ExtResource("1_8qqau")
+detail_normal = ExtResource("2_sfbdx")
+uv1_triplanar = true

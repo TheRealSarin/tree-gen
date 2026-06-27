@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cwmwp71q63jh3"]
+
+[ext_resource type="ArrayMesh" uid="uid://b5g13n7cr3kqb" path="res://exports/tree1.tres" id="1_sxwec"]
+[ext_resource type="ArrayMesh" uid="uid://u43vbfd3rcs2" path="res://exports/tree2.tres" id="2_cbapx"]
+[ext_resource type="ArrayMesh" uid="uid://du1rfap5vfhl0" path="res://exports/tree3.tres" id="3_cbapx"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cbapx"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_vqaho"]
+sky_material = SubResource("ProceduralSkyMaterial_cbapx")
+
+[sub_resource type="Environment" id="Environment_1u5je"]
+background_mode = 2
+sky = SubResource("Sky_vqaho")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vqaho"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sxwec"]
+albedo_color = Color(0.12376713, 0.31083682, 0.19511563, 1)
+
+[node name="Node3D" type="Node3D" unique_id=193645862]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1975629667]
+environment = SubResource("Environment_1u5je")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2091204046]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=703153429]
+transform = Transform3D(200, 0, 0, 0, 1, 0, 0, 0, 200, 0.040338516, 0.039466858, 0.0016212463)
+mesh = SubResource("PlaneMesh_vqaho")
+surface_material_override/0 = SubResource("StandardMaterial3D_sxwec")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=533919479]
+mesh = ExtResource("1_sxwec")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=2052775247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.273354, 0, 0)
+mesh = ExtResource("2_cbapx")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1811928149]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.069557, 0, 0)
+mesh = ExtResource("3_cbapx")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=738401813]
+transform = Transform3D(0.91690785, 0.021399213, 0.39852482, -0.074403726, 0.9902208, 0.118013754, -0.3921022, -0.13785948, 0.9095333, 5.2763996, 7.4137697, 12.930343)

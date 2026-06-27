@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://0sdyvn3yc122"]
+
+[ext_resource type="Texture2D" uid="uid://dirac783hdebe" path="res://Textures/leaf.png" id="1_8cmqg"]
+
+[resource]
+cull_mode = 2
+albedo_color = Color(0.61339027, 0.61339027, 0.61339027, 1)
+albedo_texture = ExtResource("1_8cmqg")
+uv1_triplanar = true

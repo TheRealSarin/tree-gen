@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bg1ld48smpxcc"]
+
+[ext_resource type="Texture2D" uid="uid://dr456i5udqtfh" path="res://Textures/tree_leaves.png" id="1_et3lp"]
+
+[resource]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+albedo_color = Color(0.36327878, 0.77171165, 0.46522635, 1)
+albedo_texture = ExtResource("1_et3lp")
+albedo_texture_force_srgb = true
